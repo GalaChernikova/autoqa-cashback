@@ -1,16 +1,16 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.*;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
     @Test
     public void shouldCalcValid() {
     CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(500);
-        assertEquals(actual, 500);
+        assertEquals(500, actual);
     }
 
     @Test
@@ -18,7 +18,7 @@ class CashbackHackServiceTest {
         CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(0);
-        assertEquals(actual, 1000);
+        assertEquals(1000, actual);;
     }
 
     @Test
@@ -26,7 +26,7 @@ class CashbackHackServiceTest {
         CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(1000);
-        assertEquals(actual, 1000);
+        assertEquals(1000, actual);;
     }
 
     @Test
@@ -34,6 +34,6 @@ class CashbackHackServiceTest {
         CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(1700);
-        assertEquals(actual, 300);
+        assertEquals(300, actual);;
     }
 }
